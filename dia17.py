@@ -5,8 +5,12 @@ saldo = 100
 emojis = ["🍒", "🍋", "🍉", "⭐", "🔔"]
 
 while saldo > 0:
-    aposta = int(input("Você tem R$" + str(saldo) + ". Quanto deseja apostar? "))
-
+    contagem = 0
+    while contagem < 1:
+        print("saldo insuficiente")
+        aposta = int(input("Você tem R$" + str(saldo) + ". Quanto deseja apostar? "))
+        if aposta < saldo:
+            contagem = 10
     if aposta > 70:
         sorte = 2
     elif aposta > 50:
